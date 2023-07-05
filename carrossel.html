@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrosel</title>
+    <link rel="stylesheet" href="/carrossel.css">
+</head>
+<body>
+    
+    
+    <div class="all">
+        <div class="car" id="carrossel">
+            <div class="img1" id="a1"></div>
+            <div class="img2" id="a2"></div>
+            <div class="img3" id="a3"></div>
+        </div>
+        <div class="arrow" onclick="()=> troca(imgChange)"></div>
+    </div>
+    <script>
+        var img1 = document.getElementById('carrossel')
+        const[imgChange,setImgChange] = "";
+        function troca(imgChange){
+            if(imgChange == true){
+                setImgChange(img1.style.backgroundColor = 'rgb(0,0,0)')
+            }
+        }
+        function verdade(imgChange){
+            imgChange = true
+        }
+    </script>
+</body>
+
+</html>
