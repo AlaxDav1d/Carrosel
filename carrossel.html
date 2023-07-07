@@ -10,24 +10,37 @@
     
     
     <div class="all">
+        <div class="arrow" onclick="volta()"></div>
         <div class="car" id="carrossel">
-            <div class="img1" id="a1"></div>
-            <div class="img2" id="a2"></div>
-            <div class="img3" id="a3"></div>
+            <div class="img1" id="a1">
+                <img src="/download.jpg" alt="">
+                <img src="/sla.jpg" alt="">
+                <img src="/sla123.png" alt="">
+            </div>
         </div>
-        <div class="arrow" onclick="()=> troca(imgChange)"></div>
+        <div class="arrow" onclick="frente()"></div>
     </div>
     <script>
-        var img1 = document.getElementById('carrossel')
-        const[imgChange,setImgChange] = "";
-        function troca(imgChange){
-            if(imgChange == true){
-                setImgChange(img1.style.backgroundColor = 'rgb(0,0,0)')
+        const imgs = document.getElementById('a1')
+        let min = -300
+        let max = 300
+      
+        function frente(){
+            
+            imgs.style.marginLeft = `${min}px`
+            min = min - 300
+            console.log(min)
+          
+            return min
             }
+        function volta(){
+            imgs.style.marginLeft = `${max}px`
+            min = min + 300
+            console.log(min)
+        
+            return min
         }
-        function verdade(imgChange){
-            imgChange = true
-        }
+
     </script>
 </body>
 
