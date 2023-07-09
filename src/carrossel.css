@@ -14,26 +14,30 @@ body{
     justify-content: space-around;
     align-items: center;
     min-height: 100vh;
-    width: 600px;
+    width: 50%;
     background-color: aquamarine;
-}
-
-.add{
-    transform: rotate(360deg);
-    opacity: 1;
-    transition: 6s;
+  
 }
 .a{
     position: absolute;
-    opacity: 0.5;
- 
+    opacity: 0;
+    width: 100%;
+    transition: opacity 0.5s;
 }
+.add{
+    position: relative;
+    opacity: 1;  
+}
+
 button{
     background-color: gray;
-    width: 60px;
-    height: 60px;
-    border-radius: 10px;
+    width: 80px;
+    height: 50px;
+    border-radius: 20px;
     cursor: pointer;
+}
+button:hover{
+    background-color: rgb(149, 148, 148);
 }
 .car{
     position: relative;
@@ -41,19 +45,10 @@ button{
     align-items: center;
     justify-content: center;
     width: 700px;
+    height: 30vh;
 }
-.red{
+img{
+    width: 700px;
     height: 30vh;
-    width: 100%;
-    background-color: red;
-}
-.green{
-    height: 30vh;
-    width: 100%;
-    background-color: green;
-  
-}.blue{
-    height: 30vh;
-    width: 100%;
-    background-color: blue;
+    border-radius: 30px;
 }
