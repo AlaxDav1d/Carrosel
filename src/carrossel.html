@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrosel</title>
+    <link rel="stylesheet" href="carrossel.css">
+</head>
+<body>
+
+    <div class="all">
+        <button onclick="volta()"></button>
+        <div class="car">
+                <div class="red a"></div>
+                <div class="blue a"></div>
+                <div class="green a"></div>
+
+        </div>
+        <button onclick="frente()"></button>
+    </div>
+
+    <script>
+        const imgs = document.querySelectorAll('.a')
+        let sliderAtual = 0
+        
+        function remove(){
+            imgs.forEach(item => item.classList.remove('add'))
+        }
+        function add(){
+            imgs[sliderAtual].classList.add('add')
+        }
+
+        function frente(){
+            remove()
+            if(sliderAtual === imgs.length - 1){
+                sliderAtual = 0
+            }else{
+                sliderAtual++
+            }
+            add()
+        }
+        function volta(){
+            remove()
+            if(sliderAtual === 0){
+                sliderAtual = imgs.length -1
+            }else{
+                sliderAtual--
+            }
+            add()
+        }
+
+    </script>
+</body>
+
+</html>
