@@ -20,11 +20,13 @@ body{
 
 .add{
     transform: rotate(360deg);
+    opacity: 1;
+    transition: 6s;
 }
 .a{
     position: absolute;
-   
-    width: 100%;
+    opacity: 0.5;
+ 
 }
 button{
     background-color: gray;
@@ -43,17 +45,15 @@ button{
 .red{
     height: 30vh;
     width: 100%;
-    background-color: #ff0000;
-
+    background-color: red;
 }
 .green{
     height: 30vh;
     width: 100%;
-    background-color: #00ff55;
+    background-color: green;
   
 }.blue{
     height: 30vh;
     width: 100%;
-    background-color: #2600ff;
-
+    background-color: blue;
 }
