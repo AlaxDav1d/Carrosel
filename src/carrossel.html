@@ -21,32 +21,23 @@
     <script>
         const imgs = document.querySelectorAll('.a')
         let sliderAtual = 0
-        
-        function remove(){
-            imgs.forEach(item => item.classList.remove('add'))
-        }
-        function add(){
-            imgs[sliderAtual].classList.add('add')
-        }
-
         function frente(){
-            remove()
+            imgs.forEach(item => item.classList.remove('add'))
             if(sliderAtual === imgs.length - 1){
                 sliderAtual = 0
             }else{
                 sliderAtual++
             }
-            add()
-
+            imgs[sliderAtual].classList.add('add')
         }
         function volta(){
-            remove()
+            imgs.forEach(item => item.classList.remove('add'))
             if(sliderAtual === 0){
                 sliderAtual = imgs.length -1
             }else{
                 sliderAtual--
             }
-            add()
+            imgs[sliderAtual].classList.add('add')
         }
         setInterval(frente, 4000)
 
